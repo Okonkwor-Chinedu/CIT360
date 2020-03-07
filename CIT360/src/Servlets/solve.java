@@ -1,5 +1,7 @@
 package Servlets;
 
+import java.io.IOException;
+
 public class solve extends HttpServlet {
 
 	public static void main(String[] args) {
