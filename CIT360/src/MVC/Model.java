@@ -1,40 +1,43 @@
 package MVC;
 
 public class Model {
-	private String Number;
 
-	private String Name;
 
-	   
 
-	public String getNumber() {
+    public long calculate(long number1, long number2, String operator) {
 
-		return Number;
+        switch (operator) {
 
-	}
+            case "+":
 
-	  
+                return number1 + number2;
 
-	public void setNumber(String Number) {
+            case "-":
 
-		this.Number = Number;
+                return number1 - number2;
 
-	}
+            case "*":
 
-	   
+                return number1 * number2;
 
-	public String getName() {
+            case "/":
 
-		return Name;
+                if (number2 == 0)
 
-	}
+                    return 0;
 
-	   
 
-	public void setName(String Name) {
 
-		this.Name = Name;
+                return number1 / number2;
 
-	}
+        }
+
+
+
+        System.out.println("Unknown operator - " + operator);
+
+        return 0;
+
+    }
 
 }

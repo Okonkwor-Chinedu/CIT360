@@ -12,11 +12,11 @@ public class Main{
 
     public static void main (String[]args){
 
-        System.out.println("First I'm going to run 4 threads at the same time using a runnable (RunTask class) while running four threads using executors.");
+        System.out.println();
 
-        System.out.println("The counter will stop when it reaches 10 for each thread");
+        System.out.println("Counter will stop when it reaches 50 for each thread");
 
-        System.out.println("Thread main has started");
+        System.out.println();
 
         System.out.println();
 
@@ -26,15 +26,11 @@ public class Main{
 
         executeThreadPool();
 
-
-
-    }//close main method
-
-
+    }
 
     public static void runnables(){
 
-        System.out.println("creating 4 threads on RunTask object");
+        System.out.println();
 
         Thread t1 = new Thread(new RunTask());
 
@@ -44,7 +40,7 @@ public class Main{
 
         Thread t4 = new Thread(new RunTask());
 
-        System.out.println("Running threads on RunTask objects");
+        System.out.println();
 
         t1.start();
 
@@ -55,20 +51,18 @@ public class Main{
         t4.start();
 
 
-
-    }//close runnables
-
+    }
 
 
     public static void executeThreadPool(){
 
-        System.out.println("Executing thread pool");
+        System.out.println();
 
         ExecutorService execService = Executors.newFixedThreadPool(4);
 
 
 
-        System.out.println("Starting ExecuteThreadPool on RunTask objects");
+        System.out.println();
 
         execService.execute(new RunTask());
 
@@ -84,8 +78,8 @@ public class Main{
 
 
 
-        System.out.println("ExecuteThreadPool is completed and the service is shutdown");
+        System.out.println();
 
-    }//close executeThreadPool method
+    }
 
-}//close Main class
+}
