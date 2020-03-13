@@ -5,13 +5,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
-class Test extends Thread  
-{ 
-    public void run() 
-    { 
-        System.out.println("Run method executed by child Thread"); 
-    } 
-}
+
+
 
 public class Main{
 
@@ -19,7 +14,7 @@ public class Main{
 
         System.out.println();
 
-        System.out.println("Counter will stop when it reaches 10 for each thread");
+        System.out.println("Counter will stop when it reaches 50 for each thread");
 
         System.out.println();
 
@@ -28,7 +23,6 @@ public class Main{
 
 
         runnables();
-        extendThread();
 
         executeThreadPool();
 
@@ -85,13 +79,7 @@ public class Main{
 
 
         System.out.println();
-       
 
     }
 
-    public static void extendThread(){
-    
-    	Test t = new Test(); 
-        t.start(); 
-}
 }
