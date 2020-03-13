@@ -37,6 +37,8 @@ public class Main {
       SortedSet treeSet = new TreeSet();
       treeSet.add("1");
       treeSet.add("2");
+      treeSet.add("2");
+      treeSet.add("2");
       displayAll(treeSet);
       
       LinkedHashSet lnkHashset = new LinkedHashSet();
