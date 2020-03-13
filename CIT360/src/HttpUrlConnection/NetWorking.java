@@ -12,9 +12,7 @@ public class NetWorking {
 	private static Scanner in;
 	
 	public static void main(String args[]) throws IOException{
-		try{
-			
-		
+
 		in = new Scanner(System.in);
 		String email = null;
 		String password = null;
@@ -28,8 +26,6 @@ public class NetWorking {
 		URL url = new URL(urlLink);
 		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 		conn.setRequestMethod("GET");
-		int statusCode = conn.getResponseCode();
-		System.out.println(statusCode);
 		
 		BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 		StringBuffer sb = new StringBuffer();
@@ -37,11 +33,8 @@ public class NetWorking {
 		while((line = in.readLine()) !=null) {
 			sb.append(line);
 		}
-		System.out.println("close connection");
 		in.close();
 		System.out.println(sb.toString());
-		} catch(Exception e) {
-			System.out.println(e.getMessage());
 		}
-		}
-}
+
+	}
