@@ -1,6 +1,7 @@
 package Collections;
 
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.SortedMap;
 import java.util.SortedSet;
@@ -36,6 +37,9 @@ public class Main {
       
       SortedSet treeSet = new TreeSet();
       treeSet.add("1");
+      treeSet.add("7");
+      treeSet.add("5");
+      treeSet.add("2");
       treeSet.add("2");
       displayAll(treeSet);
       
@@ -61,6 +65,11 @@ public class Main {
       map3.put("key2", "KKK");
       displayAll(map3.keySet());
       displayAll(map3.values());
+      
+      PriorityQueue q = new PriorityQueue();
+      q.add("First Task");
+      q.add("Second Task");
+      displayAll(q);
    }
    static void displayAll(Collection col) {
       Iterator itr = col.iterator();
